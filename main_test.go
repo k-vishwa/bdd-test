@@ -36,7 +36,7 @@ var _ = Describe("Response", func() {
 	Context("check http response", func() {
 		It("get response", func() {
 			host := os.Getenv("HOST")
-			Expect(getPage("http://" + host + ":8081")).To(Equal("Hello World-Update"))
+			Expect(getPage("http://" + host + ":8081")).To(Equal("Hello World-Update1"))
 			// Ω(getPage("http://localhost:4444")).Should(Equal("Hello World: VishwanathDevhhOps.local"))
 		})
 
