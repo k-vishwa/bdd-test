@@ -35,7 +35,7 @@ func getPage(url string) string {
 var _ = Describe("Response", func() {
 	Context("check http response", func() {
 		It("get response", func() {
-			responseMsg := "Hello World-canary"
+			responseMsg := "Hello World-bigbang"
 			host := os.Getenv("HOST")
 			if host != "" {
 				Expect(getPage("http://" + host + ":8081")).To(Equal(responseMsg))
