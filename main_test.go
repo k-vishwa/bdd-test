@@ -38,7 +38,7 @@ var _ = Describe("Response", func() {
 			responseMsg := "Hello World-canary"
 			host := os.Getenv("HOST")
 			if host != "" {
-				Expect(getPage("http://" + host + ":8081")).To(Equal(responseMsg))
+				Expect(getPage("http://" + host + ":4444")).To(Equal(responseMsg))
 			}else{
 				dns := os.Getenv("DNS")
 				Expect(getPage("http://" + dns)).To(Equal(responseMsg))
