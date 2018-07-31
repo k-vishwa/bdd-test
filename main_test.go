@@ -35,10 +35,10 @@ func getPage(url string) string {
 var _ = Describe("Response", func() {
 	Context("check http response", func() {
 		It("get response", func() {
-			responseMsg := "Hello World"
+			responseMsg := "I got Deployed From DaaC successfully"
 			host := os.Getenv("HOST")
 			if host != "" {
-				Expect(getPage("http://" + host + ":4444")).To(Equal(responseMsg))
+				Expect(getPage("http://" + host + ":8080")).To(Equal(responseMsg))
 			}else{
 				dns := os.Getenv("DNS")
 				Expect(getPage("http://" + dns)).To(Equal(responseMsg))
